@@ -16,6 +16,8 @@ app.all('*', (req, res) => {
     res.status(404).send(`<h3> Resource not found<h3>`)
 });
 
-app.listen(9100, () => {
-    console.log(`Server started on the port 9100`);
+const PORT = process.env.PORT || 9100;
+
+app.listen(PORT, () => {
+    console.log(`Server started on the port '${PORT}'`);
 });
